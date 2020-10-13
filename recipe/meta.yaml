@@ -1,4 +1,4 @@
-{% set version = "0.4.6" %}
+{% set version = "0.4.8" %}
 
 package:
   name: cgsn_parsers
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://bitbucket.org/ooicgsn/cgsn-parsers/get/{{ version }}.tar.gz
-  sha256: 80175404cb62b9b1536890d4423fc89ed76bc7fd9424b32829263e6ff68fd71f
+  sha256: 3cda63267a99be0b04bfeb9cc4b5f425f8f878121b252ddac7376e8c192060aa
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -22,6 +22,8 @@ requirements:
     - numpy
     - munch >=2.1.0
     - pytz
+    - pandas
+    # - nose
 
 test:
   imports:
