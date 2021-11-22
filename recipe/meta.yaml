@@ -1,4 +1,4 @@
-{% set version = "0.4.8" %}
+{% set version = "0.5.0" %}
 
 package:
   name: cgsn_parsers
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://bitbucket.org/ooicgsn/cgsn-parsers/get/{{ version }}.tar.gz
-  sha256: 3cda63267a99be0b04bfeb9cc4b5f425f8f878121b252ddac7376e8c192060aa
+  sha256: 7149df02d8a77981247feed1837b079ec390eb9046a0afe523fb03305270bade
 
 build:
   number: 0
@@ -14,26 +14,30 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - numpy
     - munch >=2.1.0
     - pytz
     - pandas
-    # - nose
+    - nose
 
 test:
   imports:
     - cgsn_parsers
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://bitbucket.org/ooicgsn/cgsn-parsers
   license: MIT
   license_file: LICENSE.txt
-  summary: 'parsers for converting raw data from the OOI moorings'
+  summary: parsers for converting raw data from the OOI moorings
 
 extra:
   recipe-maintainers:
