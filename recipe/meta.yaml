@@ -15,19 +15,23 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - numpy
     - munch >=2.1.0
     - pytz
     - pandas
-    # - nose
+    - nose
 
 test:
   imports:
     - cgsn_parsers
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://bitbucket.org/ooicgsn/cgsn-parsers
