@@ -1,11 +1,11 @@
-About cgsn_parsers
-==================
+About cgsn_parsers-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cgsn_parsers-feedstock/blob/main/LICENSE.txt)
 
 Home: https://bitbucket.org/ooicgsn/cgsn-parsers
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cgsn_parsers-feedstock/blob/main/LICENSE.txt)
 
 Summary: parsers for converting raw data from the OOI moorings
 
