@@ -1,4 +1,4 @@
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: cgsn_parsers
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://bitbucket.org/ooicgsn/cgsn-parsers/get/{{ version }}.tar.gz
-  sha256: e80d8a27bed7dedba4c6d924d294e46395f4cbe440eaba21bbc94705178924a8
+  sha256: 38b926cec7316cefeaca5f775ea94b2081ad2046964302453f20f6099e595325
 
 build:
   number: 0
