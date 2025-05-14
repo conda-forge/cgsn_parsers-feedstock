@@ -27,7 +27,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-cgsn_parsers-green.svg)](https://anaconda.org/conda-forge/cgsn_parsers) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cgsn_parsers.svg)](https://anaconda.org/conda-forge/cgsn_parsers) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cgsn_parsers.svg)](https://anaconda.org/conda-forge/cgsn_parsers) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cgsn_parsers.svg)](https://anaconda.org/conda-forge/cgsn_parsers) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-cgsn__parsers-green.svg)](https://anaconda.org/conda-forge/cgsn_parsers) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cgsn_parsers.svg)](https://anaconda.org/conda-forge/cgsn_parsers) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/cgsn_parsers.svg)](https://anaconda.org/conda-forge/cgsn_parsers) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cgsn_parsers.svg)](https://anaconda.org/conda-forge/cgsn_parsers) |
 
 Installing cgsn_parsers
 =======================
