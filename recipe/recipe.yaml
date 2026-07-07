@@ -1,0 +1,54 @@
+schema_version: 1
+
+context:
+  python_min: "3.11"
+  version: "0.17.0"
+
+package:
+  name: cgsn_parsers
+  version: ${{ version }}
+
+source:
+  url: https://bitbucket.org/ooicgsn/cgsn-parsers/get/${{ version }}.zip
+  sha256: 2b21e628cfe17cff515e65c2191b7cd77871397b5db51b7f2d16bad5744a7e36
+  patches:
+    # The library doesn't need both and pip-check fails with the conflicting yaml import source.
+    - remove_yaml_dep.patch
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=79.0.0
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - munch >=4.0.0
+    - numpy >=2.2.5
+    - pandas >=2.2.3
+    - pytz >=2025.2
+    - pyyaml >=6.0.2
+    - requests >=2.32.3
+
+tests:
+  - python:
+      imports:
+        - cgsn_parsers
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: parsers for converting raw data from the OOI moorings
+  license: MIT
+  license_file: LICENSE.txt
+  homepage: https://bitbucket.org/ooicgsn/cgsn-parsers
+
+extra:
+  recipe-maintainers:
+    - ocefpaf
